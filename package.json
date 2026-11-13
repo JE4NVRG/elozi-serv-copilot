@@ -1,0 +1,23 @@
+{
+  "name": "elozi-serv-copilot",
+  "version": "0.1.0",
+  "description": "Auditable AI triage copilot for Elozi customer service, powered by SERV Reasoning (OpenServ).",
+  "license": "MIT",
+  "type": "module",
+  "engines": { "node": ">=22" },
+  "scripts": {
+    "demo": "tsx src/cli.ts --source fixtures --reasoner offline --dry-run",
+    "run:serv": "tsx src/cli.ts --source fixtures --reasoner serv --dry-run",
+    "probe": "tsx src/cli.ts --probe",
+    "view": "tsx src/serve.ts",
+    "view:live": "LOG_PATH=logs/sample/live-run.jsonl tsx src/serve.ts",
+    "view:serv": "LOG_PATH=logs/sample/serv-batch.jsonl tsx src/serve.ts",
+    "test": "node --import tsx --test tests/*.test.ts",
+    "typecheck": "tsc --noEmit"
+  },
+  "devDependencies": {
+    "@types/node": "^22.10.0",
+    "tsx": "^4.19.0",
+    "typescript": "^5.6.0"
+  }
+}

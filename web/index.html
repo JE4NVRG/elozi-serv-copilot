@@ -1,0 +1,22 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Elozi SERV Copilot — Decision audit log</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <h1>Elozi SERV Copilot <span class="sub">decision audit log</span></h1>
+    <p class="note">Every row is one decision made by the copilot. Nothing here was sent to a customer: drafts wait for human review, handoffs only flag the team.</p>
+    <div class="controls">
+      <label>Log file <input type="file" id="file" accept=".jsonl,.json,.txt"></label>
+      <select id="filter"><option value="">all actions</option><option>draft</option><option>handoff</option><option>none</option><option>error</option></select>
+    </div>
+    <div id="stats"></div>
+  </header>
+  <main id="rows"></main>
+  <script src="app.js"></script>
+</body>
+</html>

@@ -1,0 +1,9 @@
+node_modules/
+.env
+.env.*
+!.env.example
+*.secret
+secrets/
+logs/*.jsonl
+logs/raw/
+!logs/sample/
